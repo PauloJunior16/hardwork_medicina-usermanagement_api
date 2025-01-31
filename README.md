@@ -21,10 +21,22 @@
 
 3. Migrações do Banco de Dados
 Para executar as migrações, siga estes passos:
-- No terminal execute o comando abaixo para instalar a ferramenta Entity Framework Core para realizar as migrações:
+
+No terminal execute o comando abaixo para instalar a ferramenta Entity Framework Core:
   
 `dotnet tool install --global dotnet-ef`
 
 Execute o comando para rodar as migrações:
 
 `dotnet ef database update`
+
+### Testes
+Execute os testes unitários através do comando:
+
+`dotnet test`
+
+### Notas Adicionais
+
+- O projeto usa Entity Framework Core para interação com o banco de dados MySQL.
+- A estrutura do banco de dados é criada automaticamente através das migrações do Entity Framework.
+- O endpoint de limpeza de registros antigos deve ser usado com cautela, pois remove permanentemente dados do banco.
